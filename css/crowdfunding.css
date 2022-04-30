@@ -1,0 +1,445 @@
+:root {
+    --Width: 0%;
+}
+
+body {
+    margin: 0 auto;
+    font-family: 'Commissioner', sans-serif;
+    font-size: 16px;
+    color: hsl(0, 0%, 48%);
+    background-image: url(sinistra.png);
+}
+
+h1,
+h3 {
+    color: hsl(0, 0%, 0%);
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 1.75em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+h3 {
+    font-size: 1.17em;
+}
+
+.btn { 
+    padding: 12px 35px;
+    border: none;
+    
+    color: white;
+    font-weight: 700;
+    position: relative;
+    cursor: pointer;
+    margin-left: 38%;
+    background-color: rgb(219, 199, 81);
+}
+
+
+.btn:hover,
+.btn:active {
+    background-color: rgb(165, 150, 67);
+}
+
+.btn:disabled{
+    background-color: hsl(0, 0%, 48%);
+    opacity: 1;
+}
+
+.logod{
+    padding-top: 70px;
+    position: absolute;
+    padding-left: 44%;
+    width: 10%;
+}
+
+.container{
+    padding-top: 100px;
+}
+
+section {
+    margin: 100px 20%;
+    background-color: white;
+    width: 65%;
+    max-width: 750px;
+    box-shadow: 0px 0px 1px hsl(0deg 0% 48% / 26%);
+    border-radius: 5px;
+    padding: 35px;
+    margin-bottom: 15px;
+}
+
+.section-iniz { 
+    position: relative;
+}
+
+
+.section-inizh1,
+.section-iniz p {
+    text-align: center;
+    margin: 15px;
+}
+
+
+
+
+.section-progress {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.border-progress {
+    border-left: 2px solid hsl(0deg 0% 48% / 50%);
+    border-right: 2px solid hsl(0deg 0% 48% / 50%);
+    margin-left: 35px;
+    margin-right: 35px;
+    padding-right: 35px;
+    padding-left: 35px;
+}
+
+.digit {
+    font-weight: 700;
+    color: hsl(0, 0%, 0%);
+    font-size: 170%;
+    padding-bottom: 8px;
+}
+
+.progress-bar {
+    margin-top: 25px;
+    background-color: lightgray;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+}
+
+.progress {
+    width: var(--Width);
+    height: 10px;
+    background-color: rgb(219, 199, 81);
+    border-radius: 5px;
+}
+
+
+
+#modal {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%) scale(0);/*permette di far scomparire la finestra*/
+    transition: 0.25s ease-in-out;/*transizione della finestra*/
+    border: 1px solid hsl(0, 0%, 0%);
+    border-radius: 5px;
+    background-color: rgb(250 250 250);
+    z-index: 999;
+    width: 80%;
+    max-width: 750px;    
+}
+
+#modal.active {
+    -webkit-animation: openModal 0.25s forwards ease-in-out;
+            animation: openModal 0.25s forwards ease-in-out;
+}
+
+@-webkit-keyframes openModal {
+    0% {transform: translate(-50%, -50%) scale(0);}
+    100% {transform: translate(-50%, -50%) scale(1);}
+}
+
+@keyframes openModal {
+    0% {transform: translate(-50%, -50%) scale(0);}
+    100% {transform: translate(-50%, -50%) scale(1);}
+}
+
+
+
+.modal-header {
+    grid-area: header; 
+    display: grid;
+    border: none;
+    grid-template-rows: 1fr .5fr .5fr; /* --- 3 rows --- */
+    grid-template-columns: 99% 1%; /* --- 2 columns --- */
+    grid-template-areas: 
+    "title close"
+    "..... ....."
+    "parag ....."; /* --- grid layout --- */
+}
+
+.modal-header h2 {
+    grid-area: title; 
+}
+
+.modal-header p {
+    grid-area: parag; 
+}
+
+#close-modal {
+    padding-right: 100px;
+    grid-area: close; 
+    cursor: pointer;
+    align-self: start;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 30px;
+    font-weight: bold;
+    color: hsl(0, 0%, 48%);
+}
+
+#close-modal:hover {
+    color: rgb(219, 199, 81);
+}
+
+.modal-body {
+    grid-area: body; 
+    display: grid;
+    grid-template-columns: 100%; /* --- 1 column --- */
+    row-gap: 20px; 
+}
+
+
+.finestra-modale {
+    padding: 50px;
+}
+
+.finestra-modale input,.finestra-modale textarea {
+
+    display: block;
+
+    width: 100%;
+
+    padding: 0 20px;
+
+    margin-bottom: 10px;
+
+    background: #E9EFF6;
+
+    line-height: 40px;
+
+    border-width: 0;
+
+    border-radius: 20px;
+
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.finestra-modale .title {
+    cursor: pointer;
+    grid-area: title;
+    display: grid;
+    align-self: center;
+    margin-top: 10px;
+}
+
+.finestra-modale .quantity {
+    cursor: pointer;
+    grid-area: quantity; 
+    display: flex;
+    align-self: center;
+    margin-top: 10px;
+}
+
+.finestra-modale .title span {
+    color: hsl(176, 50%, 47%);
+    padding-left: 20px;
+}
+
+.finestra-modale .quantity span {
+    padding-left: 5px;
+}
+
+.finestra-modale .info {
+    cursor: pointer;
+    grid-area: info; 
+    align-self: start;
+}
+
+.finestra-modale .bid {
+    grid-area: bid; 
+    border-top: 1px solid hsl(0, 0%, 48%);
+    display: grid;
+    grid-template-rows: 100px; /* --- 1 row --- */
+    grid-template-columns: 5% 50% 20% 20% 5%; /* --- 5 columns --- */
+    grid-template-areas:
+    ". label input button ."; 
+}
+
+.finestra-modale .bid label {
+    grid-area: label; 
+    margin-top: 27.5px;
+}
+
+.finestra-modale .bid input {
+    grid-area: input; 
+    border: none;
+    height: 50%;
+    width: 75%;
+    margin-top: 12.5px;
+    border: 1px solid hsl(0, 0%, 48%);
+    border-radius: 35px;
+    text-align: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.finestra-modale .bid .continue { 
+    cursor: pointer;
+    grid-area: button; 
+    border: none;
+    height: 50%;
+    margin-top: 12.5px;
+    border-radius: 35px;
+    background-color: hsl(176, 50%, 47%);
+    text-align: center;
+}
+
+.finestra-modale .bid .continue:hover { 
+    background-color: hsl(176, 72%, 28%);
+    color: rgb(250 250 250);
+}
+
+.finestra-modale .bid .continue:active { 
+    background-color: hsl(176, 50%, 47%);
+    border: 5px solid hsl(176, 72%, 28%);
+    color: hsl(0, 0%, 0%);
+}
+
+.finestra-modale .bid input::-webkit-input-placeholder {
+    text-align: center;
+}
+
+.finestra-modale .bid input::-moz-placeholder {
+    text-align: center;
+}
+
+.finestra-modale .bid input:-ms-input-placeholder {
+    text-align: center;
+}
+
+.finestra-modale .bid input::-ms-input-placeholder {
+    text-align: center;
+}
+
+.finestra-modale .bid input::placeholder {
+    text-align: center;
+}
+
+.unavailable {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+
+
+/*--success modal --*/
+
+#success-container, #notification-container { 
+    z-index:9999;
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%) scale(0);
+    background-color: rgb(250 250 250);
+    width: 500px;
+    max-width: 100vw;
+    height:auto;
+    padding:30px;
+    height:auto;
+    border: solid 1px lightgray;
+    border-radius: 10px;
+    justify-content:center;
+}
+
+#notification-container {
+    display: grid;
+    height: 200px;
+}
+
+#success-container.active {
+    -webkit-animation: openModal 0.25s forwards ease-in-out;
+            animation: openModal 0.25s forwards ease-in-out;
+}
+
+#notification-container.active {
+    -webkit-animation: openModal 0.25s forwards ease-in-out;
+            animation: openModal 0.25s forwards ease-in-out;
+}
+
+#success-modal {
+   text-align:center; 
+}
+
+#notification-modal {
+    display: grid;
+    place-self: center center;
+    font-size: 150%;
+    color: hsl(0, 0%, 0%);
+}
+
+#success-modal h3 {
+    padding:20px 0 20px 0px; 
+}
+
+#success-modal h3 {
+    margin:20px 0 20px 0px; 
+}
+
+#final-success {
+    background-color: hsl(176, 72%, 28%);
+    padding:15px;
+    border: 1px solid;
+    border-radius: 35px;
+    width:100px;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/*   MOBILE  */
+
+
+
+@media (max-width: 576px) {
+    
+
+    .finestra-modale .bid .continue { 
+        border-radius: 10px;
+        font-size: smaller;
+    }
+
+  
+    .section-progress {
+        justify-content: center;
+    }
+
+    .progress-item {
+        width: 100%;
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 375px) {
+   
+    .finestra-modale .bid .continue { 
+        align-self: center;
+        margin-bottom: 2.5px;
+        font-size: 75%;
+    }
+
+}

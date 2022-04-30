@@ -1,0 +1,197 @@
+html,body{
+    margin:0;
+    padding:0;
+}
+body{
+    margin:0; 
+    padding:0;
+    background: #e2e2e000; 
+    color: #666;
+    font: 16px/28px;
+    font-family: 'Open Sans', sans-serif; 
+    line-height:22px;
+}
+h2{
+    font-family:oswald;
+    text-transform:uppercase;
+    font-weight:normal; 
+    text-align: center; 
+}
+a{
+    color:#21aabd;
+    text-decoration:none;
+}
+a:hover{
+    color:#333;
+    text-decoration:underline;
+}
+
+
+	#container{
+        width: 100%;
+        margin: 0 auto;
+        background:#fff
+    }
+		
+		/*** Header ***/
+		#header{
+            width:100%;
+            padding:20px;
+            background:#21aabd;
+        }
+		#header a{
+            color:rgb(253, 253, 253); 
+            padding:15px 20px;
+            display:inline-block; 
+            text-decoration:none; 
+            text-transform:uppercase;
+            font-family:oswald;
+        }
+			#header a:hover{
+                background:#333;
+            }
+			
+	
+		
+		/*** Slider ***/	
+		.slider-wrapper	{
+            width:100%;
+        }
+
+        .ch-item{
+            margin-left: 38%;
+        }
+		
+		/*** Contenuto evi ***/
+		.item-evi{
+            width: 100%;
+            text-align: right;
+            float: right;
+        }
+		
+
+		.imgpers{
+			position: relative;
+            background-repeat: no-repeat;
+            background-size: cover;
+            flex-wrap: wrap;
+		}
+
+
+		/*** Messaggio ***/
+		#mes-full{
+            width:100%;
+            padding:20px;
+            clear:both;
+            background: #e2e2e023;
+        }	
+			#mes-full p{
+                font-family:oswald;
+                text-transform:uppercase;
+                font-weight:normal;
+                font-size: 28px; 
+                text-align: center;
+            }				
+		
+		/*** Contenuto ***/
+		#content{
+            width:100%;
+            padding:20px;
+            float:right;
+        }
+			#content .articolo	{
+                border-bottom:1px solid #eee;
+                min-height:190px;
+                padding:0px 0 10px 0;
+            }
+			#content .articolo img{
+                float:right;
+                margin: 0 20px 0 0;
+            }
+			
+			#content .last		{
+                border-bottom:none;
+            }
+
+		/*** Sidebar ***/
+		#sidebar{
+            width:260px;
+            padding:20px;
+            float:left;
+        }
+	
+		/*** Footer ***/
+		#footer	{
+            width:100%;
+            padding:20px;
+            clear:both;
+            background: #666;
+            color:#fff
+        }
+		
+		
+/* Clear */
+.clear{
+    width:100%;
+    clear:both;
+    height:1px;
+    background:rgba(238, 238, 238, 0.034);
+}
+
+	
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .imgpers{
+        background-color: rgba(245, 245, 245, 0);
+    }
+   
+  }
+  
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+    .imgpers{
+        background-color: rgba(245, 245, 245, 0);
+    }
+    
+}
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+    .imgpers{
+        background-image: url(../img/sin.png);
+        
+    }
+    .item-evi {
+         padding-left: 500px; 
+    } 
+    #content {
+        padding-left: 500px; 
+   } 
+    }
+  
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+    .imgpers{
+        background-image: url(../img/sin.png);
+        
+    }
+    .item-evi {
+        padding-left: 500px; 
+    } 
+    #content {
+        padding-left: 500px; 
+   } 
+  } 
+  
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    .imgpers{
+        background-image: url(../img/sin.png);
+        
+    }
+    .item-evi {
+        padding-left: 500px; 
+    } 
+    #content {
+        padding-left: 500px; 
+   } 
+  }

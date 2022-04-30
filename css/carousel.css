@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box
+}
+
+.image-slide {
+    max-height: 500px;
+    width: 100%;
+}
+
+.slide {
+    max-height: 500px;
+    display: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.carosello {
+    margin-top: 30px;
+    position: relative;
+    margin: auto;
+}
+
+.prec,
+.succ {
+    cursor: pointer;
+    user-select: none;
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #DDDDDD;
+    color: rgb(45, 45, 45);
+    font-size: 18px;
+    transition: 0.5s ease;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 38px;
+}
+
+.succ {
+    right: 0;
+}
+
+.prec:hover,
+.succ:hover {
+    background-color: #DDDDDD;
+    color: black;
+}

@@ -1,0 +1,52 @@
+@font-face {
+    font-family: 'title';
+    src: url("../DreamwoodDemoRegular-Zj3q.ttf") format('truetype'),
+}
+
+html * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+body {
+    font-size: 100%;
+    font-family: "Roboto", sans-serif;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+aside {
+    justify-content: center;
+    text-align: center;
+   
+}
+
+p {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10px;
+    
+}
+.descr{
+    text-align: center;
+    font-weight: bold;
+    font-style: bold;
+    font-variant: small-caps;
+    font-size: 2.1em;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    
+}
+.container{
+    padding-top: 90px;
+    padding-bottom: 30px;
+    display: flow-root;
+}
+article {
+    display: flex;
+    justify-content: center;
+}
